@@ -17,7 +17,7 @@ class CustomTextField extends StatelessWidget {
         if (value?.isEmpty ?? true) {
           return 'Field is required';
         } else {
-          return 'null';
+          return null;
         }
       },
       maxLines: maxLines,
