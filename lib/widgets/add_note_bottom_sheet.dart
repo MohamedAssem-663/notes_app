@@ -20,6 +20,7 @@ class AddNotesBottomSheet extends StatelessWidget {
           if (state is AddNoteSuccess) {
             BlocProvider.of<NotesCubit>(context).fetchAllNotes();
             Navigator.pop(context);
+            showSnackBar(context, 'Success');
           }
         },
         builder: (context, state) {
