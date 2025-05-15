@@ -14,7 +14,7 @@ class NoteModel extends HiveObject {
   final String date;
 
   @HiveField(3)
-  int color;
+  double color;
 
   NoteModel({
     required this.title,
