@@ -14,7 +14,7 @@ class _EditNotesColorsListState extends State<EditNotesColorsList> {
   late int currentIndex;
   @override
   void initState() {
-    currentIndex = kColors.indexOf(Color(widget.note.color));
+    currentIndex = kColors.indexOf(Color(widget.note.color.toInt()));
     super.initState();
   }
 
@@ -31,7 +31,7 @@ class _EditNotesColorsListState extends State<EditNotesColorsList> {
             child: GestureDetector(
               onTap: () {
                 currentIndex = index;
-                widget.note.color = kColors[index].value;
+                widget.note.color = kColors[index].a;
                 setState(() {});
               },
               child: ColorItem(
